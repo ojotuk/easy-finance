@@ -10,16 +10,15 @@ import {
   Typography,
   Button
 } from "@mui/material";
-import phone_model from "../../../../assets/images/phone-model.PNG"
-import {connect,useDispatch} from "react-redux";
+import {connect} from "react-redux";
 import ButtonLink from "../../../../components/buttons/ButtonLink"
 
 
 function DevicesTable({display}) {
-  console.log(display)
+  
   return (
     <React.Fragment>
-      <TableContainer component={Paper} elevation={0} className="paper">
+      <TableContainer component={Paper} elevation={0} className="paper" sx={{maxHeight:400}}>
         <Table sx={{ minWidth: 650 }}>
           <TableHead>
             <TableRow>
@@ -49,9 +48,9 @@ function DevicesTable({display}) {
                 </TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.description}</TableCell>
-                <TableCell>{row.amount}</TableCell>
+                <TableCell>&#8358; {row.amount.toLocaleString()}</TableCell>
                 <TableCell align="right">
-                  <ButtonLink variant="outlined">Purchase</ButtonLink>
+                  <ButtonLink to={`/loan/device loan/device categories/mobile device loan?id=${row.id}`} variant="outlined">Purchase</ButtonLink>
                 </TableCell>
               </TableRow>
             ))}

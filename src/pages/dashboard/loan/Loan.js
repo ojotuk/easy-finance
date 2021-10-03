@@ -4,48 +4,49 @@ import Layout from "../../../components/templates";
 import ActiveLoans from "./components/ActiveLoanTable";
 import ExploreItemCard from "./components/ExploreItemCard";
 import device from "../../../assets/images/device-loan.PNG"
-import {Grid} from "@mui/material"
+import {Container, Grid} from "@mui/material"
 
 const data = [
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/",
+    route:"/Device Loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/",
+    route:"/loan/Device Loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/",
+    route:"/loan/device loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/",
+    route:"/loan/device loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
-    caption:"caption",
-    route:"/device category",
+    caption:"From N 50,000 to N 500,000",
+    route:"/loan/device loan/device categories",
     btnText:"Explore Available Devices"
   },
 ]
 export default function index() {
   return (
-      <div>
+      <Layout>
+        <Container sx={{ml:0}}>
         <h3 className="color-pry bold-600" style={{ lineHeight: "96px" }}>
           Loan
         </h3>
@@ -56,6 +57,7 @@ export default function index() {
           <ExploreItemCard {...item}/>
           </Grid>)}
         </Grid>
-      </div>
+        </Container>
+      </Layout>
   );
 }

@@ -8,7 +8,7 @@ export default function ButtonLink({ to, children , className, variant}) {
     <>
       {!to ? <Button  variant={variant} onClick={()=>console.log("hey")} className={styles.btn +" "+ className}>{children}</Button> :
       <Link to={to}>
-        <Button variant={variant} className={styles.btn +" "+ className}>{children}</Button>
+        <Button variant={variant} className={variant!=="outlined" ? styles.btn +" "+ className : styles.btnLight+ " "+ className}>{children}</Button>
       </Link>}
     </>
   );

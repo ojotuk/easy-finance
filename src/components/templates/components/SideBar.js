@@ -9,21 +9,21 @@ const navigation = [
   {
     name: "Route 1",
     icon: pie,
-    route: "/route 1",
+    route: "route 1",
     new: false,
     id: 1,
   },
   {
     name: "Loans",
     icon: pie,
-    route: "/",
+    route: "loan",
     new: true,
     id: 2,
   },
   {
     name: "Route 3",
     icon: pie,
-    route: "/route 3",
+    route: "route 3",
     new: false,
     id: 3,
   },
@@ -33,7 +33,7 @@ export default function SideBar() {
   const navItemClass = (route) =>
     classnames({
       [styles["side-nav-item"]]: true,
-      [styles["active"]]: route === history.location.pathname,
+      [styles["active"]]: route === history.location.pathname.trim().split("/")[1],
     });
 
   return (
@@ -46,7 +46,7 @@ export default function SideBar() {
       <ul className={styles["side-nav-wrapper"]}>
         {navigation.map((nav) => (
           <li key={nav.id}>
-            <Link to={nav.route} className={navItemClass(nav.route)}>
+            <Link to={`/${nav.route}`} className={navItemClass(nav.route)}>
               <img src={nav.icon} width="30px" />{" "}
               <div>
                 {nav.name} {nav.new && <span>New</span>}

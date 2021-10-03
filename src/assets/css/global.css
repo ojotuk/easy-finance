@@ -1,5 +1,6 @@
 :root {
   --pry: #0d1f5f;
+  --pryDark:#0A194E;
   --bg: #f4f7fa;
 }
 
@@ -12,6 +13,9 @@
 }
 .color-pry {
   color: var(--pry);
+}
+.color-pry-dark {
+  color: var(--pryDark);
 }
 .c-pointer {
   cursor: pointer;

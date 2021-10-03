@@ -2,3 +2,4 @@
 
 export const SIGN_OUT="SIGN_OUT"
 export const SHOW_CATEGORY="SHOW_CATEGORY"
+export const SHOW_DEVICE_TAB="SHOW_DEVICE_TAB"

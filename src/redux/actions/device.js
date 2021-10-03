@@ -6,3 +6,10 @@ export const showCategory=(category)=>{
         payload:category
     }
 }
+
+export const showDeviceTab=(tab)=>{
+    return{
+        type:actionTypes.SHOW_DEVICE_TAB,
+        payload:tab
+    }
+}
