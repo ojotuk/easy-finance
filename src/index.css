@@ -4,12 +4,12 @@ html,
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif !important;
   margin: 0;
   padding: 0;
 }

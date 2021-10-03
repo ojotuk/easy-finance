@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Divider, Paper } from "@mui/material";
 import Layout from "../../../components/templates";
-import { connect, useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import { Container } from "@mui/material";
 import { useHistory } from "react-router";
 
@@ -14,7 +14,7 @@ function DeviceLoanForm({ products }) {
       const item = products.find((el) => `${el.id}` === `${id}`);
       setData(item);
     }
-  }, []);
+  }, [id,products]);
   return (
     <Layout>
       {data ? (

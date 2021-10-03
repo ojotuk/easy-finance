@@ -16,7 +16,7 @@ const navigation = [
   {
     name: "Loans",
     icon: pie,
-    route: "loan",
+    route: "loans",
     new: true,
     id: 2,
   },
@@ -47,7 +47,7 @@ export default function SideBar() {
         {navigation.map((nav) => (
           <li key={nav.id}>
             <Link to={`/${nav.route}`} className={navItemClass(nav.route)}>
-              <img src={nav.icon} width="30px" />{" "}
+              <img src={nav.icon} width="30px" alt="icon" />
               <div>
                 {nav.name} {nav.new && <span>New</span>}
               </div>

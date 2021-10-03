@@ -72,8 +72,8 @@ function Index({ tab }) {
                   dispatch(showCategory(item.category));
                 }}
               >
-                <div>
-                  <img src={item.image} />
+                <div className="d-flex flex-column align-items-center">
+                  <img src={item.image} alt="device-category" />
                   <h6 className="text-center color-pry" style={{lineHeight:"48px"}}>{item.type}</h6>
                 </div>
                 <div className={indicatorClass(index)}></div>

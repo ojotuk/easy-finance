@@ -1,5 +1,4 @@
 import React from "react";
-import {HashRouter} from "react-router-dom"
 import Layout from "../../../components/templates";
 import ActiveLoans from "./components/ActiveLoanTable";
 import ExploreItemCard from "./components/ExploreItemCard";
@@ -18,28 +17,28 @@ const data = [
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/loan/Device Loan",
+    route:"/loans/Device Loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/loan/device loan",
+    route:"/loans/device loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"caption",
-    route:"/loan/device loan",
+    route:"/loans/device loan",
     btnText:"Explore Available Devices"
   },
   {
     image:device,
     category:"Device Loan",
     caption:"From N 50,000 to N 500,000",
-    route:"/loan/device loan/device categories",
+    route:"/loans/device loan/device categories",
     btnText:"Explore Available Devices"
   },
 ]

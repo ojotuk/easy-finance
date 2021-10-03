@@ -10,9 +10,9 @@ import Route2 from "./pages/dashboard/sample3"
 function App() {
   return (
     <Switch>
-      <Route exact path="/loan" component={Loan} />
-      <Route exact path="/loan/:type/:action" component={DeviceCategory} />
-      <Route exact path="/loan/:type/:action/:category" component={DeviceLoanForm} />
+      <Route exact path="/loans" component={Loan} />
+      <Route exact path="/loans/:type/:action" component={DeviceCategory} />
+      <Route exact path="/loans/:type/:action/:category" component={DeviceLoanForm} />
       <Route exact path="/route 1" component={Route1} />
       <Route exact path="/route 3" component={Route2} />
     </Switch>

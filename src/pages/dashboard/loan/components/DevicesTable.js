@@ -8,7 +8,6 @@ import {
   TableRow,
   Paper,
   Typography,
-  Button
 } from "@mui/material";
 import {connect} from "react-redux";
 import ButtonLink from "../../../../components/buttons/ButtonLink"
@@ -46,11 +45,11 @@ function DevicesTable({display}) {
                 <TableCell component="th" scope="row">
                   <img src={row.image} alt="phone-model" width="40px"/>
                 </TableCell>
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.description}</TableCell>
-                <TableCell>&#8358; {row.amount.toLocaleString()}</TableCell>
+                <TableCell ><Typography variant="body2" color="primary">{row.name}</Typography></TableCell>
+                <TableCell><Typography variant="body1" color="primary">{row.description}</Typography></TableCell>
+                <TableCell><Typography color="primary">&#8358; {row.amount.toLocaleString()}</Typography></TableCell>
                 <TableCell align="right">
-                  <ButtonLink to={`/loan/device loan/device categories/mobile device loan?id=${row.id}`} variant="outlined">Purchase</ButtonLink>
+                  <ButtonLink to={`/loans/device loan/device categories/mobile device loan?id=${row.id}`} variant="outlined">Purchase</ButtonLink>
                 </TableCell>
               </TableRow>
             ))}
