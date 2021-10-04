@@ -8,31 +8,31 @@ import {Container, Grid} from "@mui/material"
 const data = [
   {
     image:device,
-    category:"Device Loan",
+    category:"Category 1",
     caption:"caption",
     route:"/loans",
-    btnText:"Explore Available Devices"
+    btnText:"Link"
   },
   {
     image:device,
-    category:"Device Loan",
+    category:"category 2",
     caption:"caption",
     route:"/loans",
-    btnText:"Explore Available Devices"
+    btnText:"Link"
   },
   {
     image:device,
-    category:"Device Loan",
+    category:"Category 3",
     caption:"caption",
     route:"/loans",
-    btnText:"Explore Available Devices"
+    btnText:"Link"
   },
   {
     image:device,
-    category:"Device Loan",
+    category:"Category 4",
     caption:"caption",
     route:"/loans",
-    btnText:"Explore Available Devices"
+    btnText:"Link"
   },
   {
     image:device,

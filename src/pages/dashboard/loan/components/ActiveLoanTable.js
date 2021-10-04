@@ -41,7 +41,9 @@ export default function ActiveLoanTable() {
               <TableCell>
                 <span className="bold color-pry">Repayment Date</span>
               </TableCell>
-              <TableCell align="right">Actions</TableCell>
+              <TableCell align="right">
+              <span className="bold color-pry">Action</span>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
