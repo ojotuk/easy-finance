@@ -1,20 +1,62 @@
 import React from "react";
-import {HashRouter, Switch, Route} from "react-router-dom"
-import Layout from "../../../components/templates"
-import Loan from "./Loan"
-import DeviceCategory from "./DeviceCategory";
-import DeviceLoanForm from "./DeviceForm";
+import Layout from "../../../components/templates";
+import ActiveLoans from "./components/ActiveLoanTable";
+import ExploreItemCard from "./components/ExploreItemCard";
+import device from "../../../assets/images/device-loan.PNG"
+import {Container, Grid} from "@mui/material"
+
+const data = [
+  {
+    image:device,
+    category:"Device Loan",
+    caption:"caption",
+    route:"/loans",
+    btnText:"Explore Available Devices"
+  },
+  {
+    image:device,
+    category:"Device Loan",
+    caption:"caption",
+    route:"/loans",
+    btnText:"Explore Available Devices"
+  },
+  {
+    image:device,
+    category:"Device Loan",
+    caption:"caption",
+    route:"/loans",
+    btnText:"Explore Available Devices"
+  },
+  {
+    image:device,
+    category:"Device Loan",
+    caption:"caption",
+    route:"/loans",
+    btnText:"Explore Available Devices"
+  },
+  {
+    image:device,
+    category:"Device Loan",
+    caption:"From N 50,000 to N 500,000",
+    route:"/loans/device loan/device categories",
+    btnText:"Explore Available Devices"
+  },
+]
 export default function index() {
   return (
-    <Layout>
-    <HashRouter>
-      <Switch>
-        <Route exact path="/" component={Loan}/>
-        <Route exact path="/device category" component={DeviceCategory}/>
-        <Route exact path="/:category/:type" component={DeviceLoanForm}/>
-        <Route component={Loan}/>
-      </Switch>
-    </HashRouter>
-    </Layout>
+      <Layout>
+        <Container sx={{ml:0}}>
+        <h3 className="color-pry bold-600" style={{ lineHeight: "96px" }}>
+          Loan
+        </h3>
+        <ActiveLoans />
+        <Grid container spacing={4} sx={{mt:4}}>
+          {data.map((item,index)=>
+          <Grid item md={6} lg={3} key={index}>
+          <ExploreItemCard {...item}/>
+          </Grid>)}
+        </Grid>
+        </Container>
+      </Layout>
   );
 }
